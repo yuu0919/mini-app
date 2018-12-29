@@ -12,4 +12,28 @@
     .site
       %h1
         %a.toppage(href='/')MiniApp
+
+    -if user_signed_in?
+      .header
+        .header-box__name
+          %a.btn(href="users/#{current_user.id}")#{current_user.name}のページ
+        .header-box
+          .header-box__btn
+            = link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'btn'
+          .header-box__btn
+            = link_to '投稿する', new_blog_path, class: 'btn'
+    -else
+      .header
+        .header-box
+          .header-box__btn
+            = link_to 'ログイン', new_user_session_path, method: :post, class: 'btn'
+          .header-box__btn
+            = link_to '新規登録', new_user_registration_path, method: :post, class: 'btn'
+
+    .content
+
+    .footer
+      .footer-box
+
+
     = yield

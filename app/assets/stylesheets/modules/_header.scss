@@ -1,0 +1,46 @@
+.header {
+  padding-top: 50px;
+  height: 80px;
+  width: 100%;
+  background-color: orange;
+  .header-box__name {
+    height: 80px;
+    width: 200px;
+    text-align: center;
+    line-height: 80px;
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+    .btn {
+      color: white;
+      text-decoration: none;
+    }
+    .btn:hover {
+      display: block;
+      background-color: gray;
+    }
+  }
+  .header-box {
+    height: 80px;
+    width: 300px;
+    float: right;
+    &__btn {
+      font-weight: bold;
+      font-size: 20px;
+      height: 80px;
+      width: 50%;
+      text-align: center;
+      line-height: 80px;
+      float: left;
+      .btn {
+        color: white;
+        text-decoration: none;
+      }
+      .btn:hover {
+        display: block;
+        background-color: gray;
+
+      }
+    }
+  }
+}
