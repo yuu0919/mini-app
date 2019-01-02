@@ -1,0 +1,37 @@
+  h3 {
+    @include h_();
+  }
+  .container {
+    height: 100%;
+    width: 800px;
+    margin: 0 auto;
+    input[type="string"] {
+      display: block;
+      height: 50px;
+      width: 500px;
+      margin: 10px auto;
+    }
+    .text {
+      margin: 10px auto;
+      display: block;
+      margin-top: 20px;
+      height: 300px;
+      width: 500px;
+    }
+    input[type="submit"] {
+      font-weight: bold;
+      color: white;
+      height: 50px;
+      width: 100px;
+      font-size: 20px;
+      padding: 10px 10px;
+      border-style: none;
+      background-color: orange;
+      border-radius: 4px;
+      display: block;
+      margin: auto;
+    }
+    input[type="submit"]:hover {
+      background-color: blue;
+    }
+  }
