@@ -1,0 +1,81 @@
+.content {
+  height: calc(100vh - 130px - 30px);
+  width: 100%;
+  overflow: auto;
+  .content-left {
+    overflow: auto;
+    float: left;
+    height: 100%;
+    width: 50%;
+    .blog-title {
+      font-size: 30px;
+      text-align: center;
+    }
+    .blog-image {
+      margin: 0 auto;
+      height: 300px;
+      width: 90%;
+      background-size: cover;
+    }
+    .blog-text {
+      font-size: 1.5rem;
+      height: 100%;
+      width: 80%;
+      margin: 0 auto;
+    }
+    .more{
+      padding-bottom: 50px;
+      .more_list{
+        display: table;
+        .list{
+          margin-left: 15px;
+          background-color: orange;
+          list-style: none;
+          display: inline-block;
+          padding: 10px 20px;
+          border-radius: 4px;
+          .btn {
+            font-size: 20px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+          }
+        }
+        .list:hover {
+          background-color: blue;
+        }
+      }
+    }
+  }
+
+  .content-right {
+    float: right;
+    height: 100%;
+    width: 50%;
+    .comment__all {
+      font-size: 20px;
+      height: 80%;
+      width: 100%;
+      overflow: auto;
+      .comments {
+        color: gray;
+        text-decoration: none;
+      }
+      p {
+        color: gray;
+      }
+    }
+    .comment__sent {
+      height: 20%;
+      width: 100%;
+      .comment {
+        margin: 0;
+        height: 50px;
+        width: 60%;
+        font-size: 20px;
+        float: left;
+      }
+    }
+  }
+  @include main();
+}

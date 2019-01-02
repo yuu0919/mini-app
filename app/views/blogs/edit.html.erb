@@ -1,0 +1,12 @@
+<div class="content">
+  <div class="container">
+    <%= form_for("/blogs/#{@blog.id}", method: :patch ) do %>
+      <h3>
+        編集する
+      </h3>
+      <input placeholder="title" type="string" name="title" value="<%= @blog.title %>" autofocus="true">
+      <input placeholder="Image Url" type="string" name="image" value="<%= @blog.image %>" autofocus="true">
+      <textarea class="text" cols="30" name="text" placeholder="text" rows="10"><%= @blog.text %></textarea>
+      <input type="submit" value="SENT">
+    <% end %>
+</div>

@@ -1,0 +1,13 @@
+<div class="content">
+  <div class="container">
+    <%= form_for('/blogs', method: :post) do %>
+    <h3>
+      投稿
+    </h3>
+    <input placeholder="title" type="string" name="title">
+    <input placeholder="Image_url" type="string" name="image">
+    <textarea class="text" placeholder="text" type="text" name="text" cols= 30 rows= 10></textarea>
+    <input type="submit" value="SENT">
+    <% end %>
+  </div>
+</div>

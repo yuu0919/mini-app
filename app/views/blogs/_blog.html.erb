@@ -1,0 +1,31 @@
+<div class="item">
+  <div class="name">
+    <span>投稿者</span><%= blog.user.name%>
+  </div>
+  <div class="item-title">
+  <%= simple_format(blog.title) %>
+  </div>
+  <div class="item-image" style="background-image: url(<%= blog.image %>);">
+  </div>
+  <div class="item-text">
+  <%= simple_format(blog.text) %>
+  </div>
+
+<% if user_signed_in? && current_user.id == blog.user_id %>
+  <div class="more">
+    <ul class="more_list">
+      <li class="list">
+        <%= link_to '詳細', "/blogs/#{blog.id}", method: :get, class: "btn" %>
+      </li>
+      <% if user_signed_in? && current_user.id == blog.user_id %>
+      <li class="list">
+        <%= link_to '編集', "/blogs/#{blog.id}/edit", method: :get, class: "btn" %>
+      </li>
+      <li class="list">
+        <%= link_to '削除', "/blogs/#{blog.id}", method: :delete, class: "btn" %>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+</div>

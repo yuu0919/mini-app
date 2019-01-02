@@ -1,0 +1,11 @@
+@mixin input(){
+  padding-left: 20px;
+  height: 40px;
+  width: 500px;
+}
+
+@mixin h_(){
+  text-align: center;
+  color: gray;
+  font-size: 30px;
+}
